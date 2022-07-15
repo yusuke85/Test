@@ -10,12 +10,14 @@ function DogListApi () {
       .then((data) => {
         const dogKinds = Object.keys (data.message);
         setDogBreed(dogKinds);
+        console.log(url)
+        
       });
   }, [url]);
 
-  const NUMBER_LIST_TO_RENDER = 0;
+  const NUMBER_LIST_TO_RENDER = 1;
   const listToRender = useMemo(() => {
-    return dogBreed.slice(NUMBER_LIST_TO_RENDER);
+    return dogBreed.slice(0, NUMBER_LIST_TO_RENDER);
   }, [dogBreed]);
 
   return (

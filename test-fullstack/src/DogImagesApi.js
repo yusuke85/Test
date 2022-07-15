@@ -3,7 +3,8 @@ import React, { useState, useEffect, useMemo } from "react";
 function DogImagesApi() {
   const [image, setImage] = useState([]);
   useEffect(() => {
-    fetch(`https://dog.ceo/api/breed/appenzeller/images`)
+    fetch(`https://dog.ceo/api/breed/affenpinscher
+/images`)
       .then((res) => res.json())
       .then((data) => {
         Object.keys(data.message);
